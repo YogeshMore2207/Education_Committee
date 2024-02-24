@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+
+	<section class="container-fluid body">
+
+
+		<div class="container text-center">
+
+			<h1
+				style="font-size: 50px; text-shadow: 1px 1px 2px #ccc; color: #573b8a; font-weight: 900;">
+				Education Committee</h1>
+			<h2
+				style="font-size: 17px; text-shadow: 1px 1px 2px #ccc; color: #573b8a; font-weight: 900;"
+				class="text-uppercase mt-2">anamat Chritabl trust Wardha</h2>
+
+
+
+			<div class="row">
+				<div class="col-md-4 offset-md-4">
+					<div class="card" >
+						<div class="card-body">
+								
+								<h2>
+									Hello Mr. <span th:text="${name}"></span>
+								</h2>
+								
+								<h4>pay your Addmission Fee if you are not pay fee then you are not admit in our institute</h4>
+
+								<input type="text" readonly="readonly" name="payment" class="form-control mt-3"
+									value="350₹">
+					
+											<button type="button" onclick="paymentStart()"
+													class="btn btn-primary mt-4">Pay Now
+											</button>
+								
+										
+									</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+
+	</section>
+
+
+</body>
+</html>
