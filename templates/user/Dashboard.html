@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+
+	<section class="details">
+
+
+
+
+		<div class="container text-center">
+			<h1
+				style="font-size: 40px; text-shadow: 1px 1px 2px #ccc; color: #573b8a">
+				Education Committee</h1>
+			<h2
+				style="font-size: 17px; text-shadow: 1px 1px 2px #ccc; color: #573b8a;"
+				class="text-uppercase mt-2">anamat Chritabl trust Wardha</h2>
+
+
+			<div class="row">
+				<div class="col-md-5 offset-md-7">
+					<div class="card mt-3 mb-5" style="background-color: #e2e2e2">
+						<div class="card-body">
+
+
+							<div class="container">
+										
+										
+									<form class="form" th:action="@{/user/do_process}" 
+									onsubmit="return FormSubmit()" th:object="${info}"
+									 enctype="multipart/form-data"
+									method="post" id="formss">	
+										
+									<p>*All fields are required</p>
+										
+									<input class=" form-control mt-3" type="text" name="name" id="name"
+										placeholder="Name" th:value="${info.Username}"/> 
+										
+										<span class="formerror text-danger"><p style="color: black;">*The name must be at least 3 characters</p></span>
+										
+										<input readonly="readonly" class=" form-control mt-3" type="text" name="email" id="name"
+										placeholder="Name" th:value="${info.email}"/> 
+										
+										
+									<input class="  form-control mt-3" id="address" type="text" name="Address"
+										placeholder="Address" minlength="10" maxlength="50" th:value="${info.Address}" />
+										<span class="formerror text-danger"><p  style="color: black;">*The address length must be at least 10 characters</p></span>
+										
+										
+									<input readonly="readonly"
+										class=" form-control mt-3" type="tel" name="Phoneno" id="phone"
+										placeholder="Phone NO." th:value="${info.number}" />
+										<span style="display: none;" class="formerror text-danger"></span>
+										
+										
+									<input class=" form-control mt-3" id="phone2" th:value="${info.parentNo}"
+										type="number" name="parentNo" placeholder="Parants Number" />
+										<span class="formerror text-danger"></span>
+										
+										
+									<input id="quali"
+										class=" form-control mt-3" type="text" name="Qualification"
+										th:value="${info.Qualification}"
+										 placeholder="Qualification" />
+										 <span class="formerror text-danger"><p  style="color: black;">*enter here your previous year class</p></span>
+										 
+									<input class=" form-control mt-3" id="aadharno"
+										type="number" name="AadharNo" th:value="${info.AadharNo}"
+										placeholder="Adhar Number"/> 
+										<span class="formerror text-danger"></span>
+										
+										
+										<label
+										class="mt-0">Upload Aaddhar Proof</label> 
+									<input
+										class="form-control" type="file" id="aadhar_input"
+										name="aadharimg" /> 
+										<span class="formerror text-danger"><p class="mt-3 m-0"  style="color: black;">*file size must be 100kb or less</p></span>
+										
+										
+										<label
+										class=" mt-0">Upload Makrsheet</label>
+									<input
+										class=" form-control" id="marksheet_input" type="file"
+										name="marksheetimg" />
+										<span class="formerror text-danger"><p class="mt-3 m-0"  style="color: black;">*file size must be 100kb or less</p></span>
+										<p>*Upload here your previous class marksheet</p>
+										
+
+									<div id="spn">
+											
+										</div>
+										
+										<div id="btn">
+											<button type="submit"
+													class="btn btn-primary  ">Make Payment
+											</button>
+										</div>
+										
+								</form>
+
+
+							</div>
+
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+
+	</section>
+
+</body>
+</html>
